@@ -1,0 +1,25 @@
+{
+  "name": "test",
+  "scripts": {
+    "test:qa": "CYPRESS_TEST_ENV=qa npx cypress run"
+  },
+  "dependencies": {
+    "@testing-library/cypress": "8.0.0",
+    "cypress": "8.3.1",
+    "cypress-cucumber-preprocessor": "^4.2.0"
+   
+  },
+  "cypress-cucumber-preprocessor": {
+    "step_definitions": "cypress/integration/features_defination",
+    "cucumberJson": {
+      "generate": true,
+      "outputFolder": "cypress/cucumber-json",
+      "filePrefix": "test_",
+      "fileSuffix": ".cucumber"
+    }
+  },
+  "devDependencies": {
+   
+    "chance": "^1.1.8"
+  }
+}
